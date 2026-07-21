@@ -2,6 +2,8 @@
 
 An interactive Dash app that recommends a laptop model from hardware specs and budget, backed by a Random Forest classifier trained on synthetically generated data.
 
+> **Best result: 98% test accuracy, 99% cross-validated accuracy** — expected to be high since the labels come from a simple deterministic rule (see the note on synthetic data below).
+
 ## Project Overview
 
 This project demonstrates a full pipeline — synthetic data generation, model training, and an interactive UI — for a laptop recommendation system. **The data is synthetic**, generated from a simple rule (budget bracket + RAM tier → laptop model, with noise); this is a from-scratch pipeline demo, not a recommendation engine trained on real market data.

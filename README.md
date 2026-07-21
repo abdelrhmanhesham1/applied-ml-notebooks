@@ -6,8 +6,8 @@ A collection of applied machine learning mini-projects — regression, classific
 
 | Project | Task | Result |
 |---|---|---|
-| [California Housing Price Analysis](projects/california-housing-price-analysis/) | EDA + from-scratch gradient descent (batch/stochastic/mini-batch/momentum) | `MedInc` strongest predictor, r = 0.69 |
-| [Diamond Price Prediction](projects/diamond-price-prediction/) | Random Forest + XGBoost regression, tuned | XGBoost RMSE ≈ $437, R² = 0.991 |
+| [California Housing Price Analysis](projects/california-housing-price-analysis/) | EDA + from-scratch gradient descent + final linear baseline | R² = 0.650 (held-out) |
+| [Diamond Price Prediction](projects/diamond-price-prediction/) | Random Forest + XGBoost regression, tuned | XGBoost RMSE ≈ $428, R² = 0.992 |
 | [Egypt Gold Price Forecasting](projects/egypt-gold-price-forecasting/) | Linear regression on macroeconomic indicators | Test R² = 0.980, RMSE ≈ 105 EGP |
 | [Housing Price Prediction](projects/housing-price-prediction/) | Custom normal-equation regression vs. scikit-learn vs. polynomial+Ridge | Polynomial model R² = 0.9974 |
 | [COVID-19 Data Pipeline & Dashboard](projects/covid19-data-pipeline-dashboard/) | Data cleaning pipeline + interactive Dash dashboard | Country/date-filtered live dashboard |

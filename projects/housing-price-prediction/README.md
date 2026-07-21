@@ -2,6 +2,8 @@
 
 Predicting house prices from the Kaggle Housing Prices dataset, comparing a from-scratch normal-equation linear regression against scikit-learn's implementation and a degree-2 polynomial + Ridge model.
 
+> **Best result: R² = 0.9974** (degree-2 polynomial + Ridge) · **MAE ≈ $27,985** on held-out test data.
+
 ## Project Overview
 
 This project builds three regression models on a 545-listing housing dataset — a hand-written linear regression solving the normal equation directly, scikit-learn's `LinearRegression` as a validation baseline, and a degree-2 polynomial + Ridge model for the non-linear case. The from-scratch model is checked against scikit-learn's rather than assumed correct.

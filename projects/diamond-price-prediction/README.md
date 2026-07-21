@@ -2,6 +2,8 @@
 
 Predicting diamond prices from the classic `diamonds` dataset using tuned Random Forest and XGBoost regressors, with feature engineering, log-transformed targets, and IQR-based outlier removal.
 
+> **Best result: R² = 0.992 (XGBoost, log scale) · RMSE ≈ $428** on held-out test data — verified by an actual re-run of the notebook, not copied from an earlier draft.
+
 ## Project Overview
 
 This project builds and compares two tuned regression models — Random Forest and XGBoost — to predict diamond prices from their physical and grading attributes (carat, cut, color, clarity, dimensions). It covers the full pipeline: feature engineering, outlier handling, hyperparameter search, cross-validation, and residual analysis, and is honest about where the models are less stable (see Testing below).

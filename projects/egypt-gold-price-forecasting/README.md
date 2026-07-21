@@ -2,6 +2,8 @@
 
 Linear regression forecasting the local Egyptian gold price from macroeconomic indicators — exchange rate, global gold price, inflation, Fed interest rate, local demand, geopolitical risk, and oil price.
 
+> **Best result: test R² = 0.980, RMSE ≈ 105 EGP** — read the honest caveat about sample size (48 rows) in [Testing](#testing) before treating this as more than a promising signal.
+
 ## Project Overview
 
 This project explores which macroeconomic factors drive the local 21-karat gold price in Egypt, then fits a linear regression to quantify the relationship. The dataset is a small, self-assembled monthly panel (48 rows) — the project is explicit about the limits that come with that sample size rather than overstating the result.
