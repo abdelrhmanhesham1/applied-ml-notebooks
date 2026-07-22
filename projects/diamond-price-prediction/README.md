@@ -4,6 +4,12 @@ Predicting diamond prices from the classic `diamonds` dataset using tuned Random
 
 > **Best result: R² = 0.992 (XGBoost, log scale) · RMSE ≈ $428** on held-out test data — verified by an actual re-run of the notebook, not copied from an earlier draft.
 
+## Why I Built This
+
+This notebook exists because of a bug, not a plan. The original version used `max_features='auto'`, an option scikit-learn quietly removed — so re-running someone else's finished, "working" notebook a year later threw an exception on cell one. That's a small thing, but it's the thing that actually breaks portfolios: code that worked *once*, on *someone's* machine, at *some* point in time, presented as if that's the same as working.
+
+So instead of patching the one line and moving on, I re-ran the entire pipeline end to end on a current environment, swapped the Colab-only file upload for `seaborn.load_dataset` so anyone can run it without owning my Google Drive, and let the metrics update to whatever the fixed code actually produced (RMSE moved from $437 to $428) rather than leaving the old numbers in the README out of convenience. I'd rather ship a slightly different result that's real than a nicer one that's stale.
+
 ## Project Overview
 
 This project builds and compares two tuned regression models — Random Forest and XGBoost — to predict diamond prices from their physical and grading attributes (carat, cut, color, clarity, dimensions). It covers the full pipeline: feature engineering, outlier handling, hyperparameter search, cross-validation, and residual analysis, and is honest about where the models are less stable (see Testing below).

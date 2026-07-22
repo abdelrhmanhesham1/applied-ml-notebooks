@@ -4,6 +4,12 @@ Exploratory data analysis of the classic California Housing dataset, paired with
 
 > **Best result: R² = 0.650, RMSE ≈ $66,510** on held-out test data — a verified multi-feature linear regression baseline (section 7 of the notebook).
 
+## Why I Built This
+
+`model.fit()` takes one line and tells you nothing about what actually happens inside it. I've used gradient descent as a black box in every other project in this collection, and at some point that started to bother me — I could get a good R² without being able to explain, on a whiteboard, why the loss goes down the way it does. So this notebook is the one where I stopped calling the library function and wrote batch, stochastic, mini-batch, and momentum gradient descent myself, on the same dataset, so I could watch their convergence curves diverge from each other and confirm my intuition about *why* momentum stabilizes and stochastic doesn't matched what the numbers actually did.
+
+The R² = 0.650 final model isn't the impressive part of this project by design — it's a plain linear baseline, deliberately, so the interesting comparison stays with the optimizers rather than getting buried under feature engineering. Understanding the mechanism first was the actual goal; a better score was always going to be next notebook's problem.
+
 ## Project Overview
 
 This project analyzes the 1990 California census housing dataset (20,640 block groups) to understand which factors drive median house value, then uses that understanding to train a simple linear model with a hand-written gradient descent optimizer — comparing batch, stochastic, mini-batch, and momentum update rules on the same data. It closes with a real multi-feature linear regression baseline so the notebook ends with an actual held-out score, not just a qualitative optimizer comparison.

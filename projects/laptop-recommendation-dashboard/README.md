@@ -4,6 +4,12 @@ An interactive Dash app that recommends a laptop model from hardware specs and b
 
 > **Best result: 98% test accuracy, 99% cross-validated accuracy** — expected to be high since the labels come from a simple deterministic rule (see the note on synthetic data below).
 
+## Why I Built This
+
+A 98% accuracy number is easy to be proud of and easy to misrepresent — so this project is here specifically as the counter-example in this collection. I generated the training labels myself from a simple, documented rule (budget bracket + RAM tier → laptop model), which means a high accuracy score was basically guaranteed before I trained anything. Building it anyway, and then saying that plainly in the very first paragraph, was the point: I wanted one project in my portfolio that demonstrates I know the difference between "the model learned something hard" and "the model learned the rule I wrote," and that I'll tell a reviewer which one they're looking at instead of letting the number speak for itself.
+
+The part actually worth judging here is the full pipeline underneath the number — synthetic data generation, training, model persistence, and a live slider-driven Dash UI wired to the saved model — not the accuracy figure itself.
+
 ## Project Overview
 
 This project demonstrates a full pipeline — synthetic data generation, model training, and an interactive UI — for a laptop recommendation system. **The data is synthetic**, generated from a simple rule (budget bracket + RAM tier → laptop model, with noise); this is a from-scratch pipeline demo, not a recommendation engine trained on real market data.

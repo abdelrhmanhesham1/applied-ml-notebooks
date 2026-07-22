@@ -4,6 +4,12 @@ A two-notebook pipeline: clean a 49,000-row COVID-19 dataset, then explore it th
 
 > **No accuracy/R² here by design** — this is a data-cleaning pipeline and dashboard, not a predictive model. The scale metric that matters: 49,068 raw rows cleaned down to 24,590 after outlier removal, feeding a live-filterable dashboard across 187 countries.
 
+## Why I Built This
+
+Every other notebook in this collection ends with a model and a score. This one deliberately doesn't, because not every real data problem is a prediction problem — sometimes the actual work, and the actual value, is turning 49,000 rows of messy, differently-typed, outlier-riddled COVID case data into something a person can just *look at* and trust. I built this to practice that muscle on purpose: the discipline of cleaning data properly and proving it (before/after statistics, not just a claim that it's "cleaned"), then handing it to a dashboard where a country dropdown and a date range are the whole interface.
+
+Nearly half the raw rows get removed in the outlier pass, and I kept that number in this README instead of hiding it, because a data pipeline that quietly drops 50% of its input needs to say so — that's the kind of transparency I want every dataset I touch to have, prediction model or not.
+
 ## Project Overview
 
 This project splits cleanly into two stages: **preprocessing** (missing values, type coercion, IQR outlier removal, producing a clean CSV) and a **dashboard** (an interactive Dash app reading that clean CSV) with a country dropdown, date-range picker, and four linked time-series charts — confirmed, deaths, recovered, and active cases.

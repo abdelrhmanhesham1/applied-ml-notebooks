@@ -4,6 +4,12 @@ Predicting house prices from the Kaggle Housing Prices dataset, comparing a from
 
 > **Best result: R² = 0.9974** (degree-2 polynomial + Ridge) · **MAE ≈ $27,985** on held-out test data.
 
+## Why I Built This
+
+After writing a from-scratch gradient-descent optimizer for the [California Housing project](../california-housing-price-analysis/), I wanted to answer the harder question that iterative optimization sidesteps: does my model actually converge to the *correct* answer, or just to *an* answer? Gradient descent gets you close over enough steps; the normal equation gets you the exact closed-form solution in one shot. So here I implemented that closed form myself and checked it against scikit-learn's `LinearRegression` on the identical split — not "does it seem plausible," but do the two agree to four decimal places of R². They did (0.9752 both), and that agreement is the actual proof my linear algebra was right, not just my code running without an error.
+
+Only after that verification did I let myself reach for the polynomial + Ridge model that gets the better score. Confirming the simple version was correct first is what made trusting the more complex version afterward reasonable.
+
 ## Project Overview
 
 This project builds three regression models on a 545-listing housing dataset — a hand-written linear regression solving the normal equation directly, scikit-learn's `LinearRegression` as a validation baseline, and a degree-2 polynomial + Ridge model for the non-linear case. The from-scratch model is checked against scikit-learn's rather than assumed correct.

@@ -4,6 +4,12 @@ Linear regression forecasting the local Egyptian gold price from macroeconomic i
 
 > **Best result: test R² = 0.980, RMSE ≈ 105 EGP** — read the honest caveat about sample size (48 rows) in [Testing](#testing) before treating this as more than a promising signal.
 
+## Why I Built This
+
+Gold prices in Egypt are something I've watched people actually argue about — is it the dollar exchange rate, is it global gold, is it just local demand spiking before a holiday? Everyone has an opinion and nobody has a number. There was no ready-made dataset for this, so the project started with me assembling one by hand, month by month, from public exchange-rate, inflation, and gold-price sources — which is also exactly why it's only 48 rows, and why I don't get to pretend that's a large-sample result.
+
+That's the real reason this README leads with a caveat instead of just the R². A 0.980 test R² on 48 rows is a promising signal that the macro variables I picked matter, not proof the model generalizes — and I'd rather someone read that as a well-scoped first pass on a real question than as a bigger claim than the data supports.
+
 ## Project Overview
 
 This project explores which macroeconomic factors drive the local 21-karat gold price in Egypt, then fits a linear regression to quantify the relationship. The dataset is a small, self-assembled monthly panel (48 rows) — the project is explicit about the limits that come with that sample size rather than overstating the result.
