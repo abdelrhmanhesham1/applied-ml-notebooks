@@ -25,9 +25,9 @@ This project splits cleanly into two stages: **preprocessing** (missing values, 
 
 ```mermaid
 flowchart LR
-    A[covid_19_clean_complete.csv] --> B["01_data_preprocessing.ipynb\n(clean, coerce types, remove outliers)"]
+    A[covid_19_clean_complete.csv] --> B["01_data_preprocessing.ipynb<br/>(clean, coerce types, remove outliers)"]
     B --> C[Covid_19_clean_complete_final.csv]
-    C --> D["02_interactive_dashboard.ipynb\n(Dash app)"]
+    C --> D["02_interactive_dashboard.ipynb<br/>(Dash app)"]
     D --> E[Country dropdown + date range + 4 linked charts]
 ```
 
